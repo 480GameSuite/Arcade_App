@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class movecam : MonoBehaviour {
 
+    public GameObject ball;
+
+    private Vector3 offset;
+
 	// Use this for initialization
 	void Start () {
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 1);
+
+        offset = transform.position - ball.transform.position;
+        
+        //GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 2);
+
+
 
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
+
+        transform.position = new Vector3(0, 2.54f, ball.transform.position.z + offset.z);
 		
 	}
 }

@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4906819661933614}
   - component: {fileID: 212359681527590604}
-  - component: {fileID: 114361070227798742}
   - component: {fileID: 65670826370562570}
+  - component: {fileID: 114058950694433882}
   m_Layer: 0
   m_Name: Uppipe
   m_TagString: Untagged
@@ -54,7 +54,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 3.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114361070227798742
+--- !u!114 &114058950694433882
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1262403928261684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d23cda0513f254e8ba99df2eeb60fe6e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2577bad017034eef987f2a88ad2fc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   point_of_destruction: {fileID: 0}

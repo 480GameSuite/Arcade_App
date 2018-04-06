@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
-public class Generator : MonoBehaviour {
+
+public class Generator : MonoBehaviour
+{
 
     public int num_pipes;
     public float xmin = .2f;
@@ -17,7 +20,6 @@ public class Generator : MonoBehaviour {
     private Vector3 upPosition;
     private Vector3 groundPosition;
 
-
     [SerializeField]
     private GameObject downpipe_prefab;
 
@@ -31,8 +33,10 @@ public class Generator : MonoBehaviour {
     private Transform player;
 
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start()
+    {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         downPosition = new Vector3();
         upPosition = new Vector3();
@@ -41,15 +45,25 @@ public class Generator : MonoBehaviour {
         create_pipes();
         Instantiate(ground, new Vector3(0, .35f, 0), Quaternion.identity);
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if(player.position.x >= (max_x - 6f))
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (player.position.x >= (max_x - 6f))
         {
             create_pipes();
         }
-	}
+        GameObject birdy = GameObject.Find("birdy");
+        float curr_score = (int)Mathf.Floor(birdy.transform.position.x);
+        curr_score = .66666667f * curr_score;
+        int my_score = (int)curr_score;
+
+
+        GameObject score_area = GameObject.Find("CurrScore");
+
+        score_area.GetComponentInChildren<Text>().text = my_score.ToString();
+    }
 
     private void create_pipes()
     {
@@ -61,10 +75,14 @@ public class Generator : MonoBehaviour {
             downPosition.x += 1.5f;
             upPosition.x += 1.5f;
 
-            if(count == 1)
+            downPosition.x = Mathf.Clamp(downPosition.x, 2, 99999999999);
+            upPosition.x = Mathf.Clamp(upPosition.x, 2, 99999999999);
+
+
+            if (count == 1)
             {
                 groundPosition.x += 3.36f;
-                groundPosition.y = .35f;   
+                groundPosition.y = .35f;
                 Instantiate(ground, groundPosition, Quaternion.identity);
                 count = 0;
 
@@ -81,7 +99,7 @@ public class Generator : MonoBehaviour {
 
 
 
-            if(downPosition.x > max_x)
+            if (downPosition.x > max_x)
             {
                 max_x = downPosition.x;
             }

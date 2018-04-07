@@ -1,11 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
 public class Generator : MonoBehaviour
 {
+    public bool wait_to_start_over;
+
+    public void start_over()
+    {
+
+        SceneManager.LoadScene("Scene1");
+        GameObject.Find("birdy").GetComponent<MoveBird>().paused = false;
+    }
 
     public int num_pipes;
     public float xmin = .2f;
@@ -32,7 +41,8 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private Transform player;
 
-
+    [SerializeField]
+    private GameObject end_menu;
 
     // Use this for initialization
     void Start()
@@ -60,9 +70,39 @@ public class Generator : MonoBehaviour
         int my_score = (int)curr_score;
 
 
-        GameObject score_area = GameObject.Find("CurrScore");
+        if (GameObject.Find("CurrScore"))
+        {
+            GameObject score_area = GameObject.Find("CurrScore");
+            score_area.GetComponentInChildren<Text>().text = my_score.ToString();
+        }
 
-        score_area.GetComponentInChildren<Text>().text = my_score.ToString();
+        if(GameObject.Find("birdy").GetComponent<collider_>().collided == true)
+        {
+            Destroy(GameObject.Find("r_ScoreObject"));
+
+            if(my_score > PlayerPrefs.GetInt("HighScore", 0) && (my_score > 0))
+            {
+                PlayerPrefs.SetInt("HighScore", my_score);
+            }
+
+            Instantiate(end_menu, new Vector3(), Quaternion.identity);
+            GameObject.Find("HighScore").GetComponent<Text>().text += my_score.ToString();
+            GameObject.Find("HighScore").GetComponent<Text>().text += "\nHIGH SCORE:\n" + PlayerPrefs.GetInt("HighScore", 0);
+
+            GameObject.Find("birdy").GetComponent<collider_>().collided = false;
+            GameObject.Find("birdy").GetComponent<collider_>().already = true;
+            Destroy(GameObject.Find("r_ScoreObject(Clone)"));
+            wait_to_start_over = true;
+        }
+        if(wait_to_start_over)
+        {
+            GameObject.Find("birdy").GetComponent<MoveBird>().paused = true;
+        }
+        if(wait_to_start_over == true && Input.anyKeyDown)
+        {
+            start_over();
+        }
+
     }
 
     private void create_pipes()

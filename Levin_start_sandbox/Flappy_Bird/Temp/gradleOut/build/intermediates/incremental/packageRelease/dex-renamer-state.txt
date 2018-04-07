@@ -1,0 +1,4 @@
+#Fri Apr 06 20:37:27 PDT 2018
+base.0=/Users/Alec/Documents/480GameSuite_github/Arcade_App/Levin_start_sandbox/Flappy_Bird/Temp/gradleOut/build/intermediates/transforms/dex/release/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/Alec/Documents/480GameSuite_github/Arcade_App/Levin_start_sandbox/Flappy_Bird/Temp/gradleOut/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex

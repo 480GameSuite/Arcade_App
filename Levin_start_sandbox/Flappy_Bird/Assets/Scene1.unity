@@ -268,7 +268,6 @@ Transform:
   m_Children:
   - {fileID: 149154990}
   - {fileID: 1908548020}
-  - {fileID: 1534812353}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -439,58 +438,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collided: 0
   already: 0
---- !u!1001 &1534812352
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 509595397}
-    m_Modifications:
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114237584630351586, guid: 70a3804be361e4b15b762a8a2378d053,
-        type: 2}
-      propertyPath: m_Text
-      value: TAP TO BEGIN
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1534812353 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4617864610457780, guid: 70a3804be361e4b15b762a8a2378d053,
-    type: 2}
-  m_PrefabInternal: {fileID: 1534812352}
 --- !u!1 &1553193033
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +504,7 @@ MonoBehaviour:
   ground: {fileID: 1424802711520614, guid: eb2097be3df14495a8a8d515e82ffee2, type: 2}
   player: {fileID: 0}
   end_menu: {fileID: 1374286264515014, guid: aecc0f3a55a8b405ba5b50d946f22bcb, type: 2}
+  startmenu: {fileID: 1904961407014660, guid: 70a3804be361e4b15b762a8a2378d053, type: 2}
 --- !u!1 &1908548019
 GameObject:
   m_ObjectHideFlags: 0

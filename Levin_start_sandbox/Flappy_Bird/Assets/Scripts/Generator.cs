@@ -14,6 +14,7 @@ public class Generator : MonoBehaviour
 
         SceneManager.LoadScene("Scene1");
         GameObject.Find("birdy").GetComponent<MoveBird>().paused = false;
+        System.Threading.Thread.Sleep(250);
     }
 
     public int num_pipes;
@@ -44,6 +45,9 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private GameObject end_menu;
 
+    [SerializeField]
+    private GameObject startmenu;
+
     // Use this for initialization
     void Start()
     {
@@ -53,6 +57,7 @@ public class Generator : MonoBehaviour
         groundPosition = new Vector3();
         max_x = 0;
         create_pipes();
+        Instantiate(startmenu, new Vector3(0,0,0), Quaternion.identity);
         Instantiate(ground, new Vector3(0, .35f, 0), Quaternion.identity);
 
     }

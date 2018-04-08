@@ -362,6 +362,8 @@ MonoBehaviour:
   paused: 0
   started: 0
   score: {fileID: 1242622473277498, guid: 0bc5f9b8fe31443a8b1b495cedbe62bc, type: 2}
+  option_menu: {fileID: 1279929779712004, guid: c90bcd3b76469453b8a3e2b5be5346ba,
+    type: 2}
   ymin: -2.434
   ymax: 2.434
   speed: 0.75
@@ -497,6 +499,7 @@ MonoBehaviour:
   xmax: 2.5
   down_y_min: 1.7
   down_y_max: 4.45
+  pipe_distance: 5.75
   downpipe_prefab: {fileID: 1680212615201006, guid: 6d20576009b5f4e24bdefdbf21925b04,
     type: 2}
   uppipe_prefab: {fileID: 1262403928261684, guid: 6c4b7926bee534dd394a037313aab343,

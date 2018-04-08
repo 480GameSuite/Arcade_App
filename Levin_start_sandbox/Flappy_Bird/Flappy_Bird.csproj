@@ -322,6 +322,7 @@
     <Compile Include="Assets\Scripts\Movers\movecam.cs" />
     <Compile Include="Assets\Scripts\Movers\movedestroyer.cs" />
     <Compile Include="Assets\Scripts\Movers\movegenerator.cs" />
+    <Compile Include="Assets\Scripts\Options.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

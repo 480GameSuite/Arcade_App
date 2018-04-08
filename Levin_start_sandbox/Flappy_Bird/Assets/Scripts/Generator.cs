@@ -11,7 +11,7 @@ public class Generator : MonoBehaviour
 
     public void start_over()
     {
-
+        PlayerPrefs.SetFloat("speed", GameObject.Find("birdy").GetComponent<MoveBird>().speed);
         SceneManager.LoadScene("Scene1");
         GameObject.Find("birdy").GetComponent<MoveBird>().paused = false;
         System.Threading.Thread.Sleep(250);
@@ -24,6 +24,8 @@ public class Generator : MonoBehaviour
     public float down_y_max = 4.45f;
 
     private int count = 0;
+
+    public float pipe_distance = 5.75f;
 
     private Vector3 downPosition;
     private float max_x;
@@ -65,7 +67,7 @@ public class Generator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.x >= (max_x - 6f))
+        if (player.position.x >= (max_x - 6f) && (GameObject.Find("birdy").GetComponent<Rigidbody>().velocity.x > 0))
         {
             create_pipes();
         }
@@ -115,7 +117,7 @@ public class Generator : MonoBehaviour
         for (int i = 0; i <= num_pipes; i++)
         {
             downPosition.y = Random.Range(down_y_min, down_y_max);
-            upPosition.y = downPosition.y - 5.75f;
+            upPosition.y = downPosition.y - pipe_distance;
 
             downPosition.x += 1.5f;
             upPosition.x += 1.5f;
@@ -137,12 +139,8 @@ public class Generator : MonoBehaviour
                 count++;
             }
 
-
-
             Instantiate(downpipe_prefab, downPosition, Quaternion.identity);
             Instantiate(uppipe_prefab, upPosition, Quaternion.identity);
-
-
 
             if (downPosition.x > max_x)
             {

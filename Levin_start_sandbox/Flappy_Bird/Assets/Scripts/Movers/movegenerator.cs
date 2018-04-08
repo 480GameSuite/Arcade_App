@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class movegenerator : MonoBehaviour
 {
-
     public GameObject bird;
+
     // Use this for initialization
     void Start()
     {

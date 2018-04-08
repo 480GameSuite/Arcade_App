@@ -8,6 +8,7 @@ public class collider_ : MonoBehaviour {
     public bool collided = false;
     public bool already = false;
 
+
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
         if (!already)
@@ -15,6 +16,7 @@ public class collider_ : MonoBehaviour {
             collided = true;
         }
     }
+
 
     void Update()
     {

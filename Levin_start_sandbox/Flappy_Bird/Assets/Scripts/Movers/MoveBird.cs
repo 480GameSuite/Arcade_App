@@ -6,17 +6,26 @@ using UnityEngine.UI;
 
 public class MoveBird : MonoBehaviour
 {
+    // Local variables
     public bool paused = false;
     public bool started = false;
+    public bool move;
 
+    private int is_first = 0;
+    public float ymin, ymax, speed;
+    bool goingup;
+    int count;
+
+    [SerializeField]
     public GameObject score;
     Vector3 score_position = new Vector3(64.40174f, 492.68f, -11.10653f);
 
-    Vector3 options_position = new Vector3(7.773216f, 377.2434f, 4.754386f);
-
     [SerializeField]
     private GameObject option_menu; 
+    Vector3 options_position = new Vector3(7.773216f, 377.2434f, 4.754386f);
 
+
+    // added functions
     public void start_game()
     {
         GetComponent<Rigidbody>().velocity = new Vector3(speed, 0, 0);
@@ -26,8 +35,6 @@ public class MoveBird : MonoBehaviour
 
         Instantiate(score, score_position, Quaternion.identity);
         started = true;
-
-
     }
 
     public void options()
@@ -38,6 +45,8 @@ public class MoveBird : MonoBehaviour
         GameObject.Find("Options(Clone)").GetComponent<Options>().active = true;
     }
 
+
+    // Start/Update
     // Use this for initialization
     void Start()
     {
@@ -46,13 +55,6 @@ public class MoveBird : MonoBehaviour
         GetComponent<Rigidbody>().useGravity = false;
         // move = false;
     }
-
-    bool goingup;
-    int count;
-    public float ymin, ymax;
-    public float speed;
-    public bool move;
-    private int is_first = 0;
 
     // Update is called once per frame
     void Update()
@@ -68,7 +70,6 @@ public class MoveBird : MonoBehaviour
             if (is_first == 0 && move == true)
             {
                 GetComponent<Rigidbody>().velocity = new Vector3(speed, 0, 0);
-
             }
 
             if (move)
@@ -102,10 +103,5 @@ public class MoveBird : MonoBehaviour
                 }
             }
         }
-        else
-        {
-
-        }
-
     }
 }

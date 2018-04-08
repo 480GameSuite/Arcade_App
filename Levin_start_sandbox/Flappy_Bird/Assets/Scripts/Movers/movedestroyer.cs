@@ -7,13 +7,9 @@ public class movedestroyer : MonoBehaviour {
     public GameObject cam;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
         cam = GameObject.Find("Main Camera");
         GetComponent<Rigidbody>().velocity = cam.GetComponent<Rigidbody>().velocity;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
 }

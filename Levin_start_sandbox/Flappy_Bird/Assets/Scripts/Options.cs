@@ -5,18 +5,12 @@ using UnityEngine;
 
 public class Options : MonoBehaviour
 {
-
+    public bool exists = false;
     public bool active;
 
     [SerializeField]
     private GameObject start_menu;
 
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
 
     public void new_speed(float newspeed)
     {
@@ -24,10 +18,6 @@ public class Options : MonoBehaviour
         GameObject.Find("birdy").GetComponent<MoveBird>().speed = .75f * multspeed;
         PlayerPrefs.SetFloat("sliderval", multspeed);
     }
-
-
-
-    public bool exists = false;
 
     public void go_back()
     {
@@ -47,6 +37,7 @@ public class Options : MonoBehaviour
     {
         GameObject.Find("birdy").GetComponent<MoveBird>().speed = .75f;
     }
+
 
     // Update is called once per frame
     void Update()

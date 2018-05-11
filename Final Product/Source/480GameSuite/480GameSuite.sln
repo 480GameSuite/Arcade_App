@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "480GameSuite.Plugins", "480GameSuite.Plugins.csproj", "{FA6897B1-AAC8-25C1-B0DE-E8B9CFB19810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "480GameSuite", "480GameSuite.csproj", "{5D355BC1-238B-FDA7-0C41-90EB1CCE18C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "480GameSuite.Editor.Plugins", "480GameSuite.Editor.Plugins.csproj", "{6AC8A2FB-D097-1855-0F14-ED8CB7F59796}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA6897B1-AAC8-25C1-B0DE-E8B9CFB19810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6897B1-AAC8-25C1-B0DE-E8B9CFB19810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6897B1-AAC8-25C1-B0DE-E8B9CFB19810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6897B1-AAC8-25C1-B0DE-E8B9CFB19810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D355BC1-238B-FDA7-0C41-90EB1CCE18C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D355BC1-238B-FDA7-0C41-90EB1CCE18C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D355BC1-238B-FDA7-0C41-90EB1CCE18C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D355BC1-238B-FDA7-0C41-90EB1CCE18C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC8A2FB-D097-1855-0F14-ED8CB7F59796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC8A2FB-D097-1855-0F14-ED8CB7F59796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC8A2FB-D097-1855-0F14-ED8CB7F59796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC8A2FB-D097-1855-0F14-ED8CB7F59796}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainScreen.unity
+    guid: 4b5a090550aff45f3a3401a6b789acc2
+  - enabled: 1
+    path: Assets/Scenes/BirdleJump.unity
+    guid: 5b15f45f4a711444896764f258e4bff8
+  - enabled: 1
+    path: Assets/Scenes/JumpyJumpy.unity
+    guid: 536c8382b2acc41a0843d0bcf5d8425c
+  - enabled: 1
+    path: Assets/Scenes/BallRoller.unity
+    guid: ba13c970520f94e62ab465a29753d5da
+  - enabled: 1
+    path: Assets/Scenes/Snake.unity
+    guid: 835ccbf62153b48859d5ea96bab2b8a3

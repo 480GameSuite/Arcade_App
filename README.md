@@ -1,4 +1,3 @@
-# Arcade_App
+# 480 Game Suite
 
-This is the repositiory for Eric Mott and Alec Levin's CS 480 Final Project Application.      
-This is an Arcade Style android app developed during the Spring semester of 2018.
+480 Game Suite is a mobile application built with Unity featuring an arcade theme cosisting of several different minigames such as Flappy Bird and Snake.
